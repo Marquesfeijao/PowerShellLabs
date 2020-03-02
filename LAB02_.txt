@@ -1,0 +1,110 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20200302154746
+Username: IT1405STVP\Administrator
+RunAs User: IT1405STVP\Administrator
+Machine: IT1405STVP (Microsoft Windows NT 10.0.14393.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 5852
+PSVersion: 5.1.14393.3471
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.14393.3471
+BuildVersion: 10.0.14393.3471
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\GitProj\PowerShellLabs\PowerShellLabs\LAB02.txt
+PS C:\> Get-History
+
+  Id CommandLine
+  -- -----------
+   1 Get-Service "Microsoft Dynamics" | Sort-Object status
+   2 Get-Service "Microsoft Dynamics*" | Sort-Object status
+   3 Get-Service "Microsoft*" | Sort-Object status
+   4 Get-Service "Microsoft.*" | Sort-Object status
+   5 Get-Service
+   6 Get-Service | Sort-Object Status
+   7 Get-Service | Sort-Object Status "Running"
+   8 Get-Service | Sort-Object "Running"
+   9 Get-Service | Sort-Object $_.Status = "Running"
+  10 Get-Service | Sort-Object $_.Status "Running"
+  11 Get-Service | Sort-Object $_.Status
+  12 Get-Service -Name "Dynamics"
+  13 Get-Service -Name "Microsoft*"
+  14 Get-Service -Name "Dynamics*"
+  15 Get-Service -Name "Dynamics*" | Format-Table
+  16 Get-Service -Name "Dynamics*" | Format-Table _status
+  17 Get-Service -Name "Dynamics*" | Format-Table -status
+  18 Get-Service -Name "Dynamics*" | Format-Table status
+  19 Get-Service -Name "Dynamics*" | Format-Table status
+  20 Get-Service -Name "Dynamics*"
+  21 Get-Service -Name "Dynamics*"
+  22 Get-Service -Name "Microsoft*"
+  23 cls
+  24 Get-Service -Name "Dynamics*"
+  25 Get-Service -Name "*Dynamics*"
+  26 Get-Service -Name "*Dynamics*" | Format-Table
+  27 Get-Service -Name "*Dynamics*" | Format-Table status
+  28 Get-Service -Name "*Dynamics*" | Format-Table Status, Name
+  29 Get-Service -Name "*Dynamics*" | Format-Table
+  30 Get-Command -noun "*Machine*"
+  31 Get-ComputerInfo
+  32 net view
+  33 Get-History
+  34 cd \\SSTVP-4\Share
+  35 $net = new-object -ComObject WScript.Network...
+  36 Set-Location c:
+  37 Set-Location c:\
+  38 $net = new-object -ComObject WScript.Network...
+  39 set-location U:\
+  40 dir
+  41 cd 'U:\Virtual Machines\'
+  42 dir
+  43 get-help Start-Transcript
+  44 get-help Start-Transcript -examples
+  45 Start-Transaction -Path "C:\GitProj\PowerShellLabs\PowerShellLabs" -NoClobber
+  46 Set-Location c:\
+  47 Start-Transaction -Path "C:\GitProj\PowerShellLabs\PowerShellLabs" -NoClobber
+  48 Start-Transcript  -Path "C:\GitProj\PowerShellLabs\PowerShellLabs" -NoClobber
+  49 Get-History
+  50 Start-Transcript  -Path "C:\GitProj\PowerShellLabs\PowerShellLabs\LAB02.txt" -NoClobber
+
+
+PS C:\> PS C:\> $net = new-object -ComObject WScript.Network
+>> $net.MapNetworkDrive("u:", "\\SSTVP-4\share", $false, "Domain\user", "Password")
+>> TerminatingError(Get-Process): "A positional parameter cannot be found that accepts argument 'System.__ComObject'."
+Get-Process : A positional parameter cannot be found that accepts argument 'System.__ComObject'.
+At line:1 char:1
++ PS C:\> $net = new-object -ComObject WScript.Network
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Process], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.GetProcessCommand
+Get-Process : A positional parameter cannot be found that accepts argument 'System.__ComObject'.
+At line:1 char:1
++ PS C:\> $net = new-object -ComObject WScript.Network
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Process], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.GetProcessCommand
+
+The local device name is already in use.
+
+At line:2 char:1
++ >> $net.MapNetworkDrive("u:", "\\SSTVP-4\share", $false, "Crimsonwing ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], COMException
+    + FullyQualifiedErrorId : System.Runtime.InteropServices.COMException
+The local device name is already in use.
+
+At line:2 char:1
++ >> $net.MapNetworkDrive("u:", "\\SSTVP-4\share", $false, "Crimsonwing ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], COMException
+    + FullyQualifiedErrorId : System.Runtime.InteropServices.COMException
+
+PS C:\> exit
+**********************
+Windows PowerShell transcript end
+End time: 20200302155851
+**********************
